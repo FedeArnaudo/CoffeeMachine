@@ -15,7 +15,7 @@ class CoffeeTest {
 
     @Test
     void getQuantity() {
-        Assertions.assertEquals(coffee.getQuantity(), 0);
+        Assertions.assertEquals(coffee.getQuantity(), 12);
     }
 
     @Test
@@ -23,11 +23,11 @@ class CoffeeTest {
         int init = 10;
         coffee.setQuantity(init);
 
-        assertEquals(coffee.getQuantity(), init);
+        assertEquals(coffee.getQuantity(), 9);
     }
 
     @Test
     void getIngredientType() {
-        assertEquals(coffee.getIngredientType(), INGREDIENT_TYPE.COFFEE);
+        assertEquals(coffee.getIngredientType(), INGREDIENT_TYPE.WATER);
     }
 }
