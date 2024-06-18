@@ -7,23 +7,28 @@ import static org.junit.jupiter.api.Assertions.*;
 class CoffeeTest {
 
     private Coffee coffee;
+    private int k;
+    private int result;
     private INGREDIENT_TYPE ingredientType;
     @BeforeEach
     void setUp() {
         coffee = new Coffee();
+        k = 10;
     }
 
     @Test
     void getQuantity() {
-        Assertions.assertEquals(coffee.getQuantity(), 0);
+        result = coffee.getQuantity() + k;
+        coffee.setQuantity(k);
+        Assertions.assertEquals(coffee.getQuantity(), result);
     }
 
     @Test
     void setQuantity() {
-        int init = 10;
-        coffee.setQuantity(init);
+        result = coffee.getQuantity() + k;
+        coffee.setQuantity(result);
 
-        assertEquals(coffee.getQuantity(), init);
+        assertEquals(coffee.getQuantity(), result);
     }
 
     @Test
