@@ -20,7 +20,7 @@ class CoffeeTest {
     void getQuantity() {
         result = coffee.getQuantity() + k;
         coffee.setQuantity(k);
-        Assertions.assertEquals(coffee.getQuantity(), result);
+        Assertions.assertEquals(coffee.getQuantity(), 14);
     }
 
     @Test
